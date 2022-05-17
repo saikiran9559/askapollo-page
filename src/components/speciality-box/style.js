@@ -7,10 +7,10 @@ export const Container = styled.div`
     align-items: center;
 `
 export const Box = styled.div`
-    max-width: 122px;
-    min-width: 122px;
-    max-height: 98px;
-    min-height: 98px;
+    max-width: 110px;
+    min-width: 110px;
+    max-height: 90px;
+    min-height: 90px;
     border: 1px solid #b2c7cd;
     display: flex;
     justify-content: center;

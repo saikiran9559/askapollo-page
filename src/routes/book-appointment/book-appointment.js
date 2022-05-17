@@ -55,6 +55,9 @@ const BookAppointment = ({stage, setStage, gotoSectionOne, gotoSectionTwo, gotoS
         }
     }, [])
     const [iscityshow, setcityshow] = useState(false);
+    useEffect(()=>{
+        handleResize();
+    },[])
     return (
         <Container2>
             {!show &&

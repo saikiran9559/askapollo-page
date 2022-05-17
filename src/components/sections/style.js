@@ -1,16 +1,20 @@
 import styled from 'styled-components'
+import { keyframes,css } from 'styled-components'
 
 export const Container = styled.div`
-    margin: 0 auto;
+    margin: 0 20% 0 10%;
     max-width: 70%;
     min-width: 70%;
     // max-width: 500px;
     // min-width: 500px;
     // padding-bottom:50px;
     // @media(max-width:975px){
-    //     max-width: 360px;
-    //     min-width: 360px;
+    //     max-width: 90%;
+    //     min-width: 90%;
     // }
+    @media(max-width: 776px){
+        margin: 0 auto;
+    }
 `
 export const SectionContainer = styled.div`
     margin-top: 70px;
@@ -52,10 +56,20 @@ export const Number = styled.div`
     font-weight: 600;
     text-transform: capitalize;
 `
+const flash= keyframes`
+    from{
+        height: 30px;
+    }
+    to{
+        height: auto;
+    }
+`
 export const Wrap = styled.div`
     transition:all .3s ease-in-out;
     // tranform: scaleY(${({bool}) => bool ? '100%' : '0%'})
-    height:${({bool}) => bool ? 'auto' : '30px'};
+    // max-height: auto;
+    
+    height:${({bool}) => bool ? 'auto' : '2rem'};
     overflow: hidden;
 `
 export const DropContainer = styled.div`
@@ -128,7 +142,7 @@ export const Wrap2 = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-    height: ${({show}) => !show ? 'auto' : '0px'};
+    height: ${({show}) => show ? 'auto' : '0px'};
     overflow: hidden;
 `
 export const OtherCityName = styled.a`

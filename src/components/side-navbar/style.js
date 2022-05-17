@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled,{css} from 'styled-components'
 import {keyframes} from 'styled-components'
 import CloseSvg from '../../assets/hamburger-close.svg'
 
-const rigthToLeft = keyframes`
+const rightToLeft = keyframes`
     0%{
         transform:translateX(200%);
         opactiy: 0%;
@@ -19,25 +19,29 @@ const rigthToLeft = keyframes`
 
 export const BackGround = styled.div`
     z-index: 7;
-    position: fixed;
+    position: absolute;
     top:0px;
     left: 0px;
-    width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.6);
-    transition: all 0.3s linear;
-    display: ${({sidenav}) => sidenav ? "visible" : "none"};
+    width: ${({sidenav})=>(sidenav?"100%":"%")};
+    
+    background-color: ${({sidenav})=>sidenav? 'rgba(0,0,0,0.6)': 'rgba(0,0,0,0.0)'};
+    // display: ${({sidenav}) => sidenav ? "visible" : "none"};
+    transition: all 0.2s linear;
+    overflow: hidden;
 `
 
 export const Container = styled.div`
-    position:absolute;
+    position:fixed;
     top:0px;
     right:0px;
-    width:250px;
+    width: 250px;
+    overflow: hidden;
     height:100%;
     background-color: #f1f6f7;
-    transition: all 1s ease;
-    right: ${({sidenav}) => sidenav ? `0px` : `-250px`};
+    transition: all .3s linear;
+    right: ${({sidenav}) => (sidenav ? `0px` : `-250px`)};
+
 `
 export const LoginContainer = styled.div`
     height: 68px;

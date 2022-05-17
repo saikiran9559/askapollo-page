@@ -27,6 +27,7 @@ export const Background = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: auto;
 `
 
 export const Container = styled.div`
@@ -36,6 +37,9 @@ export const Container = styled.div`
     background-color: white;
     padding: 15px;
     animation: ${topToBottom} 0.3s ease;
+    @media(max-width: 566px){
+        width: 85%;
+    }
 `
 
 

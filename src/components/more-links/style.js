@@ -87,6 +87,10 @@ export const RightSocialMediaContainer = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    @media(max-width:  776px){
+        flex-direction: column;
+        gap: 20px;
+    }
 `
 export const Image = styled.img`
     max-width:110px;

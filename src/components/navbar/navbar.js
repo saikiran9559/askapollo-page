@@ -71,7 +71,7 @@ const Navbar = ({stage, setStage, gotoSectionTwo}) => {
                     {show && <Search style={{'cursor': 'pointer'}} />}
                 </Options>
                 {show &&
-                    <MenuButton onClick={() => {setSideNavbarDisplay(true)}}>
+                    <MenuButton onClick={() => {setSideNavbarDisplay(!sideNavbarDisplay);}}>
                         <Menu style={{'cursor': 'pointer'}} />
                     </MenuButton>
                 }

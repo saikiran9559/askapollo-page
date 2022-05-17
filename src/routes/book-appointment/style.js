@@ -68,6 +68,9 @@ export const RigthContainer = styled.div`
     position:relative;
     width: 67%;
     background-color: #f6f9fb;
+    @media(max-width:776px){
+        width: 100%;
+    }
 `
 export const DoctorImage = styled.img`
     // z-index:  2;
@@ -77,6 +80,12 @@ export const DoctorImage = styled.img`
     max-width: ${({show}) => show ? '100%' : '220px'};
     min-width: ${({show}) => show ? '100%' : '220px'};
     object-fit: contain;
+    @media(max-width: 450px){
+        max-width: 150px;
+        min-width: 150px;
+        top: 10px;
+        right: 2px;
+    }
 `
 
 export const LevelContainer = styled.div`
@@ -188,13 +197,16 @@ export const SectionName = styled.div`
 export const HeadDescription = styled.div`
     display: flex;
     flex-direction: column;
+    @media(max-width: 450px){
+        // width: 40%;
+    }
 `
 export const Heading = styled.div`
     font-size: 22px;
     color:white;
     line-height: 1.2;
-    max-width: 216px;
-    min-width: 216px;
+    max-width: 100%;
+    min-width: 100%;
 `
 
 export const Description = styled.div`
