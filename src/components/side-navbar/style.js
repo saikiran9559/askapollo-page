@@ -18,12 +18,14 @@ const rigthToLeft = keyframes`
 `
 
 export const BackGround = styled.div`
+    z-index: 7;
     position: fixed;
     top:0px;
     left: 0px;
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.6);
+    transition: all 0.3s linear;
     display: ${({sidenav}) => sidenav ? "visible" : "none"};
 `
 
@@ -35,7 +37,7 @@ export const Container = styled.div`
     height:100%;
     background-color: #f1f6f7;
     transition: all 1s ease;
-    right: ${({sidenav}) => sidenav ? `0x` : `-250px`};
+    right: ${({sidenav}) => sidenav ? `0px` : `-250px`};
 `
 export const LoginContainer = styled.div`
     height: 68px;
@@ -59,7 +61,6 @@ export const Line = styled.div`
 export const PaddingContainer = styled.div`
     padding: 0px 30px;
     max-width: 100%;
-    // flex-grow: 1;
 `
 export const Heading = styled.div`
     padding-top: 12px;

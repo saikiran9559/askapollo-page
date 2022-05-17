@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+    position:relative;
+    // top:0px;
+    z-index: 0;
+    background-color: white;
     max-width: 100%;
     height: 45px;
     padding-right: 13%;
     padding-left: 13%;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    // margin-left: auto !important;
+    // margin-right: auto !important;
     padding-top: 1rem !important;
     padding-bottom: 1rem !important;
     display: flex;
@@ -19,8 +23,10 @@ export const Container = styled.div`
     }
 `
 export const LogoContainer = styled.div`
-    width: 234px;
-    height: 58px;
+    max-width: 234px;
+    min-width: 234px;
+    max-height: 58px;
+    min-height: 58px;
 `
 export const LogoImage = styled.img`
     width: 102px;
@@ -83,6 +89,9 @@ export const Help = styled.div`
     &:hover{
         color: #ebac0f;
     }
+    @media(max-width: 775px){
+        display: none;
+    }
 `
 export const ChatImage = styled.img`
     width: 24px;
@@ -96,6 +105,9 @@ export const LoginSignup = styled.div`
     font-weight: 300;
     &:hover{
         color: #ebac0f;
+    }
+    @media(max-width: 775px){
+        display: none;
     }
 `
 export const MenuButton = styled.div`

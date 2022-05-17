@@ -17,6 +17,7 @@ const topToBottom = keyframes`
 `
 
 export const Background = styled.div`
+    z-index:5;
     position: fixed;
     top:0px;
     left: 0px;

@@ -1,11 +1,18 @@
+import {useState} from "react";
 import {Outlet} from "react-router-dom";
 import Navbar from '../components/navbar/navbar'
-const Dashboard = () => {
+import styled from 'styled-components'
+const Container = styled.div`
+    position: relative;
+    display: flex;
+    flex-direction: column;
+`
+const Dashboard = ({stage, setStage, gotoSectionTwo}) => {
     return (
-        <div style={{'margin': '0px', 'padding': '0px'}}>
-            <Navbar />
+        <Container>
+            <Navbar stage={stage} setStage={setStage} gotoSectionTwo={gotoSectionTwo} />
             <Outlet />
-        </div>
+        </Container>
     );
 }
 

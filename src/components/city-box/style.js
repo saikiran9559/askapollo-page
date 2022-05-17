@@ -14,13 +14,14 @@ export const ImageContainer = styled.div`
     border-radius: 5px;
     cursor: pointer;
     border 1px solid white;
-    background-color: #f1f6f7;
+    // background-color: #f1f6f7;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: ${({selected})=>selected?'rgb(255, 231, 171)':'#f1f6f7'};
     &:hover{
         border: 1.5px solid #2e718e;
-        background-color: #ebac0f;
+        // background-color: #ebac0f;
     }
 `
 
@@ -38,4 +39,3 @@ export const Name = styled.div`
     line-height: 1.2;
     text-transform: capitalize;
 `
-

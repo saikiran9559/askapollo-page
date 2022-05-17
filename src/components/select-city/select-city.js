@@ -11,18 +11,19 @@ import {
     GridContainer
 } from './style'
 
-const SelectCityPopUp = ({setCitiesDisplay, citiesDisplay}) => {
+const SelectCityPopUp = ({gotoSectionTwo, setCitiesDisplay, citiesDisplay, stage, setStage}) => {
     return (
         <Background>
             <Container>
                 <Heading>Popular Cities</Heading>
                 <GridContainer>
                     {cities.map((item) => {
-                        return <City city={item} key={item['name']} setCitiesDisplay={setCitiesDisplay} citiesDisplay={citiesDisplay} />
+                        return <City gotoSectionTwo={gotoSectionTwo} pop={true} city={item} key={item['name']} setCitiesDisplay={setCitiesDisplay} citiesDisplay={citiesDisplay} stage={stage} setStage={setStage} />
                     })}
                 </GridContainer>
             </Container>
         </Background>
     );
 }
+
 export default SelectCityPopUp;
